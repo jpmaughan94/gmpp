@@ -1,0 +1,49 @@
+# Canonical field -> regex patterns matched against lower-cased, whitespace-collapsed
+# headers. The first pattern that matches exactly one header wins. `exclude` stops
+# narrative columns being mistaken for the rating itself.
+# Per-snapshot overrides (exact header names) go under `overrides:` once each
+# real file has been inspected.
+fields:
+  project_id:
+    patterns: ['^(gmpp|project|nista|ipa) ?id$', '^id$', '^project reference']
+  project_name:
+    patterns: ['^project name$', '^name of project', '^project$', '^project/programme name']
+  department:
+    patterns: ['^department$', '^dept', '^department/organisation', '^organisation']
+  category:
+    patterns: ['category', '^portfolio']
+  description:
+    patterns: ['description.*aims', '^description', 'project aims', 'aims']
+    exclude: ['narrative', 'commentary']
+  dca:
+    patterns: ['delivery confidence assessment', '^dca', '(ipa|nista|mpa) (rating|dca)', 'rag rating']
+    exclude: ['narrative', 'commentary', 'explanation', 'date']
+  dca_narrative:
+    patterns: ['narrative.*(delivery confidence|dca|rating)', 'commentary.*(delivery confidence|dca|rating)',
+               'explanation.*(delivery confidence|dca|rating)']
+  start_date:
+    patterns: ['start date']
+  end_date_baseline:
+    patterns: ['(baseline|original).*end date', 'end date.*baseline', '^project end date$', 'end date \(baseline\)']
+    exclude: ['forecast']
+  end_date_forecast:
+    patterns: ['forecast.*end date', 'end date.*forecast']
+  wlc_baseline:
+    patterns: ['baseline whole life cost', 'whole life cost.*baseline', '^total baseline whole life']
+    exclude: ['narrative', 'commentary']
+  wlc_forecast:
+    patterns: ['forecast whole life cost', 'whole life cost.*forecast']
+    exclude: ['narrative', 'commentary']
+  schedule_narrative:
+    patterns: ['narrative.*schedule', 'commentary.*schedule', 'schedule.*(narrative|commentary)']
+  budget_narrative:
+    patterns: ['narrative.*(budget|financial|cost|variance)', 'commentary.*(budget|financial|cost|variance)',
+               '(budget|financial|cost).*(narrative|commentary)']
+    exclude: ['whole life cost \(']
+  benefits_narrative:
+    patterns: ['narrative.*benefit', 'commentary.*benefit', 'benefit.*(narrative|commentary)']
+  benefits_baseline:
+    patterns: ['baseline.*benefits', 'monetised benefits', 'whole life (monetised )?benefits']
+    exclude: ['narrative', 'commentary']
+
+overrides: {}

@@ -1,0 +1,71 @@
+# One entry per annual GMPP snapshot. `snapshot` is the date departments reported
+# the data, not the publication date. Raw files are saved to data/raw/ and never edited.
+# Sep 2015 is missing on purpose: it was only published as ~20 departmental files.
+# There is no Sep 2020 snapshot: reporting moved from September to March in 2021.
+snapshots:
+  - id: 2013-09
+    snapshot: 2013-09-30
+    report: MPA Annual Report 2014
+    file: gmpp_2013-09.csv
+    url: https://assets.publishing.service.gov.uk/media/5a7ea47a40f0b62305b823ee/Government_Major_Projects_Portfolio_data__September_2013__CSV_.csv
+  - id: 2014-09
+    snapshot: 2014-09-30
+    report: MPA Annual Report 2015
+    file: gmpp_2014-09.csv
+    url: https://assets.publishing.service.gov.uk/media/5a801db6ed915d74e33f88a0/GMPP_data_september_2014.csv
+  - id: 2016-09
+    snapshot: 2016-09-30
+    report: IPA Annual Report 2017
+    file: gmpp_2016-09.csv
+    url: https://assets.publishing.service.gov.uk/media/5a821ed6e5274a2e8ab57995/Annual_Report_-_consolidated_data_and_narratives.csv
+  - id: 2017-09
+    snapshot: 2017-09-30
+    report: IPA Annual Report 2018
+    file: gmpp_2017-09.csv
+    url: https://assets.publishing.service.gov.uk/media/5b3e2e2340f0b678bc5d018c/csv-ipa-government-major-projects-portfolio-data-september-2017.csv
+  - id: 2018-09
+    snapshot: 2018-09-30
+    report: IPA Annual Report 2019
+    file: gmpp_2018-09.csv
+    url: https://assets.publishing.service.gov.uk/media/5d2dd08d40f0b64a8626b762/Annual_Report_on_Major_Projects_2018_to_2019__consolidated_data_and_narratives.csv
+  - id: 2019-09
+    snapshot: 2019-09-30
+    report: IPA Annual Report 2020
+    file: gmpp_2019-09.csv
+    url: https://assets.publishing.service.gov.uk/media/5f05de523a6f40041036a2ec/GMPP_Government_Major_Projects_Portfolio_data_September_2019.csv
+  - id: 2021-03
+    snapshot: 2021-03-31
+    report: IPA Annual Report 2021
+    file: gmpp_2021-03.csv
+    url: https://assets.publishing.service.gov.uk/media/60eecae48fa8f50c7ca55af1/GMPP_Government_Major_Projects_Portofolio_AR_Data_March_2021.csv
+  - id: 2022-03
+    snapshot: 2022-03-31
+    report: IPA Annual Report 2022
+    file: gmpp_2022-03.csv
+    url: https://assets.publishing.service.gov.uk/media/62d6c047e90e071e753d6936/GMPP_Government_Major_Projects_Portfolio_AR_Data_March_2022.csv
+  - id: 2023-03
+    snapshot: 2023-03-31
+    report: IPA Annual Report 2022-23
+    file: gmpp_2023-03.csv
+    url: https://assets.publishing.service.gov.uk/media/64b79c5171749c001389ee41/GMPP_Government_Major_Projects_Portofolio_AR_Data_March_2023.csv
+  - id: 2024-03
+    snapshot: 2024-03-31
+    report: IPA Annual Report 2023-24
+    file: gmpp_2024-03.csv
+    url: https://assets.publishing.service.gov.uk/media/6787e8ee1124a2c3ceb646be/Government_Major_Projects_Portofolio_AR_Data_March_2024.csv
+  - id: 2025-03
+    snapshot: 2025-03-31
+    report: NISTA Annual Report 2024-25
+    file: gmpp_2025-03.csv
+    url: https://assets.publishing.service.gov.uk/media/6895fbb63080e72710b2e2ef/nista_annual_report_data_2425.csv
+  - id: 2026-03
+    snapshot: 2026-03-31
+    report: NISTA Major Projects Annual Report 2025-26
+    file: gmpp_2026-03.csv
+    url: https://assets.publishing.service.gov.uk/media/6a4fb28da6586e258d371bfd/NISTA_Major_Projects_Annual_Report_2025-2026_Data.csv
+
+# The post-reset portfolio (1 Apr 2026): a list of 81 projects, no ratings.
+reset_list:
+  id: 2026-04-reset
+  file: gmpp_2026-04_reset.ods
+  url: https://assets.publishing.service.gov.uk/media/69c651c878ca1aa5a6360978/Apr_2026_GMPP_Data.ods

@@ -1,0 +1,27 @@
+[project]
+name = "gmpp"
+version = "0.1.0"
+description = "Red, Amber, Green: what goes wrong with Britain's biggest projects? Pipeline and analysis of the Government Major Projects Portfolio."
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=2.2", "numpy", "pyarrow", "pyyaml", "odfpy", "openpyxl",
+  "rapidfuzz>=3", "scikit-learn>=1.4", "scipy",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+app = ["dash>=2.17", "plotly"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
